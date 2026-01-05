@@ -8,8 +8,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap"
-    rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap"
+          rel="stylesheet"
   />
 
   <link rel="stylesheet" href="styles.css" />
@@ -17,252 +17,311 @@
 
 <body>
 
-  <!-- HERO -->
-  <header class="hero" id="hero">
-    <div class="hero__content">
-      <p class="eyebrow">Software Engineer</p>
-      <h1>Utkarsh Kishore</h1>
-      <p class="lead">
-        Building reliable software with a user focus. I turn complex ideas into scalable
-        products with clean code, thoughtful architecture, and a bias for shipping.
-      </p>
-
-      <div class="hero__actions">
-        <a class="btn ghost" href="#projects">View Projects</a>
-      </div>
-
-      <ul class="contact">
-        <li><a href="tel:16233995821">623-399-5821</a></li>
-        <li><a href="mailto:utkarshkishore2001@gmail.com">utkarshkishore2001@gmail.com</a></li>
-        <li><a href="https://www.linkedin.com/in/utkarsh-kishore-104861297" target="_blank">LinkedIn</a></li>
-        <li><a href="https://github.com/utkarshkishore" target="_blank">GitHub</a></li>
-      </ul>
-    </div>
-
-    <div class="hero__card">
-      <div class="stat">
-        <p class="stat__label">Current Program</p>
-        <p class="stat__value">M.S. Software Engineering</p>
-        <p class="stat__sub">Arizona State University</p>
-      </div>
-
-      <div class="stat">
-        <p class="stat__label">Primary Stack</p>
-        <p class="stat__value">MERN · Cloud · DevOps</p>
-        <p class="stat__sub">Full-stack engineer</p>
-      </div>
-
-      <a class="btn fullwidth" href="assets/UTKARSH_RESUME.pdf" target="_blank">
-        Download Resume
-      </a>
-    </div>
-  </header>
-
-  <main>
-
-    <!-- EDUCATION -->
-    <section class="section" id="education">
-      <div class="section__header">
-        <p class="eyebrow">Education</p>
-        <h2>Academic Journey</h2>
-      </div>
-
-      <div class="timeline">
-
-        <article class="timeline__item">
-          <header>
-            <h3>Arizona State University</h3>
-            <span class="meta">Tempe, AZ · Aug 2024 – Present</span>
-          </header>
-          <p class="timeline__role">Master of Science in Software Engineering</p>
-          <p class="timeline__body">
-            Graduate-level focus on scalable software systems, cloud-native platforms,
-            and AI-driven engineering practices.
-          </p>
-          <ul class="tags">
-            <li>Advanced DSA</li>
-            <li>Software V&amp;V</li>
-            <li>Cloud Computing</li>
-            <li>AI for Software Engineers</li>
-            <li>Game Programming</li>
-          </ul>
-        </article>
-
-        <article class="timeline__item">
-          <header>
-            <h3>SRM Institute of Science and Technology</h3>
-            <span class="meta">Chennai, India · Sep 2020 – Jun 2024</span>
-          </header>
-          <p class="timeline__role">
-            Bachelor of Technology in Computer Science and Engineering
-          </p>
-          <p class="timeline__body">
-            Strong foundation in computer science fundamentals, machine learning,
-            and full-stack development with hands-on academic projects.
-          </p>
-          <ul class="tags">
-            <li>Data Structures</li>
-            <li>Algorithms</li>
-            <li>OOP</li>
-            <li>Frontend Development</li>
-            <li>Data Visualization</li>
-            <li>Machine Learning</li>
-          </ul>
-        </article>
-
-      </div>
-    </section>
-
-    <!-- PROJECTS -->
-    <section class="section" id="projects">
-      <div class="section__header projects-header">
-        <div>
-          <p class="eyebrow">Projects</p>
-          <h2>Selected Work</h2>
-        </div>
-
-        <div class="project-controls">
-          <button class="arrow" onclick="scrollProjects(-1)">←</button>
-          <button class="arrow" onclick="scrollProjects(1)">→</button>
-        </div>
-      </div>
-
-      <div class="projects-scroll" id="projectsScroll">
-
-        <article class="card">
-          <p class="eyebrow">Cloud · DevOps · Full Stack</p>
-          <h3>Feature Flag Management Platform</h3>
-          <p>
-            Enterprise-grade feature flag platform enabling safe deployments and real-time
-            environment-based releases with sub-50ms evaluations.
-          </p>
-          <ul>
-            <li>Next.js, NestJS, PostgreSQL, Redis with RBAC.</li>
-            <li>15+ REST APIs with JWT auth, audit logs, rate limiting.</li>
-            <li>CI/CD via GitHub Actions & Terraform on AWS ECS Fargate.</li>
-          </ul>
-        </article>
-
-        <article class="card">
-          <p class="eyebrow">Deep Learning · OpenCV</p>
-          <h3>Hand Gesture Communication</h3>
-          <p>
-            Real-time hand gesture recognition system translating gestures into
-            readable text and speech output.
-          </p>
-          <ul>
-            <li>TensorFlow CNN achieving 97% accuracy.</li>
-            <li>OpenCV pipeline for live video inference.</li>
-            <li>Accessibility-focused user interface.</li>
-          </ul>
-        </article>
-
-        <article class="card">
-          <p class="eyebrow">Full Stack · MERN</p>
-          <h3>BlogDaily</h3>
-          <p>
-            Responsive blogging platform with optimized performance and seamless
-            content discovery.
-          </p>
-          <ul>
-            <li>React + Tailwind UI improved responsiveness by 40%.</li>
-            <li>Node/Express APIs reduced latency by 30%.</li>
-            <li>MongoDB tagging, categories, and search.</li>
-          </ul>
-        </article>
-
-        <article class="card">
-          <p class="eyebrow">Research · IEEE</p>
-          <h3>Plant Disease Detection</h3>
-          <p>
-            IEEE-published deep learning system for early plant disease detection
-            using CNN-based image classification.
-          </p>
-          <ul>
-            <li>Processed 3,000+ images achieving 98% accuracy.</li>
-            <li>Fine-tuned VGG16 with ReLU activation.</li>
-            <li>Published April 2024.</li>
-          </ul>
-        </article>
-
-      </div>
-    </section>
-
-    <!-- SKILLS -->
-    <section class="section" id="skills">
-      <div class="section__header">
-        <p class="eyebrow">Skills</p>
-        <h2>Technologies &amp; Tools</h2>
-      </div>
-
-      <div class="skills">
-        <div>
-          <h3>Languages &amp; Frameworks</h3>
-          <p>
-            JavaScript, TypeScript, Python, Java, C++, HTML, CSS,
-            React, Next.js, NestJS, Node.js, Express
-          </p>
-        </div>
-
-        <div>
-          <h3>Databases</h3>
-          <p>PostgreSQL, MongoDB, Redis</p>
-        </div>
-
-        <div>
-          <h3>DevOps &amp; Cloud</h3>
-          <p>
-            AWS (ECS Fargate, EC2), Docker, GitHub Actions, Terraform,
-            CI/CD, REST APIs, JWT Authentication
-          </p>
-        </div>
-      </div>
-
-      <div class="certifications">
-        <h3>Certifications</h3>
-        <ul class="tags">
-          <li>Machine Learning Specialization – Stanford</li>
-          <li>Analyzing Big Data with SQL</li>
-        </ul>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="section" id="contact">
-    <div class="section__header">
-      <p class="eyebrow">Connect</p>
-      <h2>Let's Build Something</h2>
-    </div>
-
-    <p>
-      If you're hiring for software engineering roles or need help shipping a
-      full-stack product, I'd love to chat.
+<header class="hero" id="hero">
+  <div class="hero__content">
+    <p class="eyebrow">Software Engineer</p>
+    <h1>Utkarsh Kishore</h1>
+    <p class="lead">
+      Building reliable software with a user focus. I turn complex ideas into scalable
+      products with clean code, thoughtful architecture, and a bias for shipping.
     </p>
 
     <div class="hero__actions">
-      <a class="btn ghost" href="https://www.linkedin.com/in/utkarsh-kishore-104861297" target="_blank">
-        LinkedIn
-      </a>
+      <a class="btn ghost" href="#projects">View Projects</a>
     </div>
 
-    <p class="footer__note">
-      © <span id="year"></span> Utkarsh Kishore. Crafted with care.
-    </p>
-  </footer>
+    <ul class="contact">
+      <li><a href="tel:16233995821">623-399-5821</a></li>
+      <li><a href="mailto:utkarshkishore2001@gmail.com">utkarshkishore2001@gmail.com</a></li>
+      <li><a href="https://www.linkedin.com/in/utkarsh-kishore-104861297" target="_blank">LinkedIn</a></li>
+      <li><a href="https://github.com/utkarshkishore" target="_blank">GitHub</a></li>
+    </ul>
+  </div>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
+  <div class="hero__card">
+    <div class="stat">
+      <p class="stat__label">Current Program</p>
+      <p class="stat__value">M.S. Software Engineering</p>
+      <p class="stat__sub">Arizona State University</p>
+    </div>
 
-    function scrollProjects(direction) {
-      const container = document.getElementById("projectsScroll");
-      container.scrollBy({
-        left: direction * 350,
-        behavior: "smooth"
-      });
-    }
-  </script>
+    <div class="stat">
+      <p class="stat__label">Core Focus</p>
+      <p class="stat__value">AI Engineering · Full Stack</p>
+      <p class="stat__sub">Intelligent & Scalable Systems</p>
+    </div>
+
+    <a class="btn fullwidth" href="assets/UTKARSH_RESUME.pdf" target="_blank">
+      Download Resume
+    </a>
+  </div>
+</header>
+
+<main>
+
+  <section class="section" id="education">
+    <div class="section__header">
+      <p class="eyebrow">Education</p>
+      <h2>Academic Journey</h2>
+    </div>
+
+    <div class="timeline">
+
+      <article class="timeline__item">
+        <header>
+          <h3>Arizona State University</h3>
+          <span class="meta">Tempe, AZ · Aug 2024 – Present</span>
+        </header>
+        <p class="timeline__role">Master of Science in Software Engineering</p>
+        <p class="timeline__body">
+          Graduate-level focus on scalable software systems, cloud-native platforms,
+          and AI-driven engineering practices.
+        </p>
+        <ul class="tags">
+          <li>Advanced DSA</li>
+          <li>Software V&amp;V</li>
+          <li>Cloud Computing</li>
+          <li>AI for Software Engineers</li>
+          <li>Game Programming</li>
+        </ul>
+      </article>
+
+      <article class="timeline__item">
+        <header>
+          <h3>SRM Institute of Science and Technology</h3>
+          <span class="meta">Chennai, India · Sep 2020 – Jun 2024</span>
+        </header>
+        <p class="timeline__role">
+          Bachelor of Technology in Computer Science and Engineering
+        </p>
+        <p class="timeline__body">
+          Strong foundation in computer science fundamentals, machine learning,
+          and full-stack development with hands-on academic projects.
+        </p>
+        <ul class="tags">
+          <li>Data Structures</li>
+          <li>Algorithms</li>
+          <li>OOP</li>
+          <li>Frontend Development</li>
+          <li>Data Visualization</li>
+          <li>Machine Learning</li>
+        </ul>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="section" id="projects">
+    <div class="section__header projects-header">
+      <div>
+        <p class="eyebrow">Projects</p>
+        <h2>Selected Work</h2>
+      </div>
+
+      <div class="project-controls">
+        <button class="arrow" onclick="scrollProjects(-1)">←</button>
+        <button class="arrow" onclick="scrollProjects(1)">→</button>
+      </div>
+    </div>
+
+    <div class="projects-scroll" id="projectsScroll">
+
+      <article class="card">
+        <p class="eyebrow">Research · IEEE</p>
+        <h3>Plant Disease Detection</h3>
+        <p>
+          IEEE-published deep learning system for early plant disease detection
+          using CNN-based image classification.
+        </p>
+        <ul>
+          <li>Processed 3,000+ images achieving 98% accuracy.</li>
+          <li>Fine-tuned VGG16 with ReLU activation.</li>
+          <li>Published April 2024.</li>
+        </ul>
+        <a href="https://github.com/utkarshkishore/Plant-Disease-identification-and-Classification" target="_blank" class="project-link">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.419-1.305.763-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+          View GitHub
+        </a>
+      </article>
+
+      <article class="card">
+        <p class="eyebrow">Cloud · DevOps · Full Stack</p>
+        <h3>Feature Flag Management Platform</h3>
+        <p>
+          Enterprise-grade feature flag platform enabling safe deployments and real-time
+          environment-based releases with sub-50ms evaluations.
+        </p>
+        <ul>
+          <li>Next.js, NestJS, PostgreSQL, Redis with RBAC.</li>
+          <li>15+ REST APIs with JWT auth, audit logs, rate limiting.</li>
+          <li>CI/CD via GitHub Actions & Terraform on AWS ECS Fargate.</li>
+        </ul>
+        <a href="https://github.com/utkarshkishore/Feature-Flag-Platform" target="_blank" class="project-link">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.419-1.305.763-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+          View GitHub
+        </a>
+      </article>
+
+      <article class="card">
+        <p class="eyebrow">Deep Learning · OpenCV</p>
+        <h3>Hand Gesture Communication</h3>
+        <p>
+          Real-time hand gesture recognition system translating gestures into
+          readable text and speech output.
+        </p>
+        <ul>
+          <li>TensorFlow CNN achieving 97% accuracy.</li>
+          <li>OpenCV pipeline for live video inference.</li>
+          <li>Accessibility-focused user interface.</li>
+        </ul>
+        <a href="https://github.com/utkarshkishore/Gesture-Communication-System" target="_blank" class="project-link">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.419-1.305.763-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+          View GitHub
+        </a>
+      </article>
+
+      <article class="card">
+        <p class="eyebrow">Full Stack · MERN</p>
+        <h3>BlogDaily</h3>
+        <p>
+          Responsive blogging platform with optimized performance and seamless
+          content discovery.
+        </p>
+        <ul>
+          <li>React + Tailwind UI improved responsiveness by 40%.</li>
+          <li>Node/Express APIs reduced latency by 30%.</li>
+          <li>MongoDB tagging, categories, and search.</li>
+        </ul>
+        <a href="https://github.com/utkarshkishore/BlogDaily" target="_blank" class="project-link">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.419-1.305.763-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+          View GitHub
+        </a>
+      </article>
+
+      <article class="card">
+        <p class="eyebrow">AI · Next.js · FastAPI</p>
+        <h3>ResQChain</h3>
+        <p>
+          Scalable food waste management system utilizing multimodal AI to analyze food freshness
+          and donate surplus food to the needful communities.
+        </p>
+        <ul>
+          <li>Next.js, FastAPI, MongoDB, Google Gemini 1.5 Flash.</li>
+          <li>Multimodal freshness scoring with sub-2s latency and 96% accuracy.</li>
+          <li>Optimized Base64 streaming for real-time driver dispatch.</li>
+        </ul>
+        <a href="https://github.com/utkarshkishore/ResQChain--Food-waste-management-system-" target="_blank" class="project-link">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.419-1.305.763-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+          View GitHub
+        </a>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="section" id="skills">
+    <div class="section__header">
+      <p class="eyebrow">Skills</p>
+      <h2>Technologies &amp; Tools</h2>
+    </div>
+
+    <div class="skills">
+      <div>
+        <h3>Languages &amp; Frameworks</h3>
+        <p>
+          JavaScript, TypeScript, Python, Java, C++, HTML, CSS,
+          React, Next.js, NestJS, Node.js, Express
+        </p>
+      </div>
+
+      <div>
+        <h3>Databases</h3>
+        <p>PostgreSQL, MongoDB, Redis</p>
+      </div>
+
+      <div>
+        <h3>DevOps &amp; Cloud</h3>
+        <p>
+          AWS (EC2,S3,Lambda), Docker, GitHub Actions, Terraform,
+          CI/CD, REST APIs, JWT Authentication
+        </p>
+      </div>
+    </div>
+
+    <div class="certifications">
+      <h3>Certifications</h3>
+      <ul class="tags">
+        <li>Machine Learning Specialization – Stanford</li>
+        <li>Analyzing Big Data with SQL</li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<footer class="section" id="contact">
+  <div class="section__header">
+    <p class="eyebrow">Contact</p>
+    <h2>Get in Touch</h2>
+  </div>
+
+  <div class="contact-container">
+
+    <div class="contact-info">
+      <p class="lead" style="margin-bottom: 0;">
+        If you're hiring for software engineering roles or need help shipping a
+        full-stack product, I'd love to chat.
+      </p>
+
+      <div>
+        <a class="btn primary" href="https://www.linkedin.com/in/utkarsh-kishore-104861297" target="_blank">
+          Connect on LinkedIn
+        </a>
+      </div>
+    </div>
+
+    <form action="https://formsubmit.co/utkarshkishore2001@gmail.com" method="POST" class="form-box">
+      <input type="text" name="_honey" style="display:none">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://utkarshkishore.github.io/">
+
+      <div class="input-group">
+        <input type="text" name="name" class="form-input" placeholder="Your Name" required>
+      </div>
+
+      <div class="input-group">
+        <input type="email" name="email" class="form-input" placeholder="Your Email" required>
+      </div>
+
+      <div class="input-group">
+        <input type="text" name="subject" class="form-input" placeholder="Subject" required>
+      </div>
+
+      <div class="input-group">
+        <textarea name="message" class="form-textarea" placeholder="Write your message here..." required></textarea>
+      </div>
+
+      <button type="submit" class="btn primary fullwidth">Send Message</button>
+    </form>
+
+  </div>
+
+  <p class="footer__note">
+    © <span id="year"></span> Utkarsh Kishore. Crafted with care.
+  </p>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  function scrollProjects(direction) {
+    const container = document.getElementById("projectsScroll");
+    container.scrollBy({
+      left: direction * 350,
+      behavior: "smooth"
+    });
+  }
+</script>
 
 </body>
 </html>
