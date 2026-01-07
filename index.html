@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-          href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap"
           rel="stylesheet"
   />
 
@@ -17,13 +17,24 @@
 
 <body>
 
+<nav class="navbar" id="navbar">
+  <div class="navbar__content">
+    <a href="#hero" class="navbar__logo">UK</a>
+    <ul class="navbar__links">
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
 <header class="hero" id="hero">
   <div class="hero__content">
-    <p class="eyebrow">Software Engineer</p>
-    <h1>Utkarsh Kishore</h1>
+    <p class="eyebrow">Software Engineer & AI Enthusiast</p>
+    <h1>Utkarsh<br><span class="accent-text">Kishore</span></h1>
     <p class="lead">
-      Building reliable software with a user focus. I turn complex ideas into scalable
-      products with clean code, thoughtful architecture, and a bias for shipping.
+      I engineer scalable, intelligent systems that solve real-world problems. Specializing in full-stack development, cloud architecture, and AI-driven solutions—transforming ambitious ideas into production-ready applications.
     </p>
 
     <div class="hero__actions">
@@ -31,10 +42,10 @@
     </div>
 
     <ul class="contact">
-      <li><a href="tel:16233995821">623-399-5821</a></li>
-      <li><a href="mailto:utkarshkishore2001@gmail.com">utkarshkishore2001@gmail.com</a></li>
-      <li><a href="https://www.linkedin.com/in/utkarsh-kishore-104861297" target="_blank">LinkedIn</a></li>
-      <li><a href="https://github.com/utkarshkishore" target="_blank">GitHub</a></li>
+      <li><a href="tel:16233995821">📱 623-399-5821</a></li>
+      <li><a href="mailto:utkarshkishore2001@gmail.com">✉️ Email</a></li>
+      <li><a href="https://www.linkedin.com/in/utkarsh-kishore-104861297" target="_blank">💼 LinkedIn</a></li>
+      <li><a href="https://github.com/utkarshkishore" target="_blank">💻 GitHub</a></li>
     </ul>
   </div>
 
@@ -74,8 +85,7 @@
         </header>
         <p class="timeline__role">Master of Science in Software Engineering</p>
         <p class="timeline__body">
-          Graduate-level focus on scalable software systems, cloud-native platforms,
-          and AI-driven engineering practices.
+          Advanced coursework in scalable distributed systems, cloud-native architectures, AI-driven software development, and formal verification. Building expertise in production-grade engineering practices.
         </p>
         <ul class="tags">
           <li>Advanced DSA</li>
@@ -95,8 +105,7 @@
           Bachelor of Technology in Computer Science and Engineering
         </p>
         <p class="timeline__body">
-          Strong foundation in computer science fundamentals, machine learning,
-          and full-stack development with hands-on academic projects.
+          Rigorous foundation in computer science fundamentals, algorithms, machine learning systems, and full-stack development. Completed multiple industry-scale projects with focus on performance and scalability.
         </p>
         <ul class="tags">
           <li>Data Structures</li>
@@ -127,92 +136,92 @@
     <div class="projects-scroll" id="projectsScroll">
 
       <article class="card">
-        <p class="eyebrow">Research · IEEE</p>
+        <p class="eyebrow">🔬 Research · IEEE</p>
         <h3>Plant Disease Detection</h3>
         <p>
-          IEEE-published deep learning system for early plant disease detection
-          using CNN-based image classification.
+          Deep learning system leveraging CNN architectures for early-stage plant disease identification and classification through advanced image processing.
         </p>
         <ul>
-          <li>Processed 3,000+ images achieving 98% accuracy.</li>
-          <li>Fine-tuned VGG16 with ReLU activation.</li>
-          <li>Published April 2024.</li>
+          <li><strong>Dataset:</strong> 3,000+ augmented agricultural images</li>
+          <li><strong>Accuracy:</strong> 98% precision on test set</li>
+          <li><strong>Model:</strong> VGG16 fine-tuned with ReLU/BatchNorm</li>
+          <li><strong>Published:</strong> IEEE Conference, April 2024</li>
         </ul>
         <a href="https://github.com/utkarshkishore/Plant-Disease-identification-and-Classification" target="_blank" class="project-link">
           <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.419-1.305.763-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-          View GitHub
+          View Repository
         </a>
       </article>
 
       <article class="card">
-        <p class="eyebrow">Cloud · DevOps · Full Stack</p>
+        <p class="eyebrow">☁️ Cloud · DevOps · Full Stack</p>
         <h3>Feature Flag Management Platform</h3>
         <p>
-          Enterprise-grade feature flag platform enabling safe deployments and real-time
-          environment-based releases with sub-50ms evaluations.
+          Enterprise-grade feature flag service enabling safe canary deployments, real-time environment-based releases, and A/B testing infrastructure.
         </p>
         <ul>
-          <li>Next.js, NestJS, PostgreSQL, Redis with RBAC.</li>
-          <li>15+ REST APIs with JWT auth, audit logs, rate limiting.</li>
-          <li>CI/CD via GitHub Actions & Terraform on AWS ECS Fargate.</li>
+          <li><strong>Stack:</strong> Next.js, NestJS, PostgreSQL, Redis</li>
+          <li><strong>APIs:</strong> 15+ RESTful endpoints with JWT auth & rate limiting</li>
+          <li><strong>Infrastructure:</strong> AWS ECS Fargate, GitHub Actions, Terraform IaC</li>
+          <li><strong>Performance:</strong> Sub-50ms evaluation latency</li>
         </ul>
         <a href="https://github.com/utkarshkishore/Feature-Flag-Platform" target="_blank" class="project-link">
           <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.419-1.305.763-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-          View GitHub
+          View Repository
         </a>
       </article>
 
       <article class="card">
-        <p class="eyebrow">Deep Learning · OpenCV</p>
+        <p class="eyebrow">🤖 Deep Learning · OpenCV</p>
         <h3>Hand Gesture Communication</h3>
         <p>
-          Real-time hand gesture recognition system translating gestures into
-          readable text and speech output.
+          Real-time gesture recognition system translating American Sign Language into text and speech output using advanced computer vision techniques.
         </p>
         <ul>
-          <li>TensorFlow CNN achieving 97% accuracy.</li>
-          <li>OpenCV pipeline for live video inference.</li>
-          <li>Accessibility-focused user interface.</li>
+          <li><strong>Model:</strong> TensorFlow CNN with 97% accuracy</li>
+          <li><strong>Processing:</strong> OpenCV real-time video inference</li>
+          <li><strong>Features:</strong> Multi-gesture support, accessibility-first design</li>
+          <li><strong>Latency:</strong> &lt;100ms per frame</li>
         </ul>
         <a href="https://github.com/utkarshkishore/Gesture-Communication-System" target="_blank" class="project-link">
           <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.419-1.305.763-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-          View GitHub
+          View Repository
         </a>
       </article>
 
       <article class="card">
-        <p class="eyebrow">Full Stack · MERN</p>
+        <p class="eyebrow">🌐 Full Stack · MERN Stack</p>
         <h3>BlogDaily</h3>
         <p>
-          Responsive blogging platform with optimized performance and seamless
-          content discovery.
+          High-performance blogging platform with optimized SEO, advanced content discovery, and responsive design delivering exceptional user experience.
         </p>
         <ul>
-          <li>React + Tailwind UI improved responsiveness by 40%.</li>
-          <li>Node/Express APIs reduced latency by 30%.</li>
-          <li>MongoDB tagging, categories, and search.</li>
+          <li><strong>Frontend:</strong> React + Tailwind CSS (40% performance gain)</li>
+          <li><strong>Backend:</strong> Node.js + Express (30% latency reduction)</li>
+          <li><strong>Database:</strong> MongoDB with tagging & full-text search</li>
+          <li><strong>Features:</strong> Categories, sorting, recommendations</li>
         </ul>
         <a href="https://github.com/utkarshkishore/BlogDaily" target="_blank" class="project-link">
           <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.419-1.305.763-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-          View GitHub
+          View Repository
         </a>
       </article>
 
       <article class="card">
-        <p class="eyebrow">AI · Next.js · FastAPI</p>
+        <p class="eyebrow">🚀 AI · Next.js · FastAPI</p>
         <h3>ResQChain</h3>
         <p>
-          Scalable food waste management system utilizing multimodal AI to analyze food freshness
-          and donate surplus food to the needful communities.
+          Intelligent food waste management system utilizing multimodal AI and computer vision to analyze food freshness and optimize surplus food distribution.
         </p>
         <ul>
-          <li>Next.js, FastAPI, MongoDB, Google Gemini 1.5 Flash.</li>
-          <li>Multimodal freshness scoring with sub-2s latency and 96% accuracy.</li>
-          <li>Optimized Base64 streaming for real-time driver dispatch.</li>
+          <li><strong>Tech Stack:</strong> Next.js, FastAPI, MongoDB, Google Gemini 1.5</li>
+          <li><strong>ML Model:</strong> 96% accuracy multimodal freshness scoring</li>
+          <li><strong>Performance:</strong> Sub-2s inference with Base64 streaming</li>
+          <li><strong>Impact:</strong> Real-time driver dispatch optimization</li>
         </ul>
         <a href="https://github.com/utkarshkishore/ResQChain--Food-waste-management-system-" target="_blank" class="project-link">
           <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.419-1.305.763-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-          View GitHub
+          View Repository
         </a>
       </article>
 
@@ -227,32 +236,46 @@
 
     <div class="skills">
       <div>
-        <h3>Languages &amp; Frameworks</h3>
+        <h3>Languages & Frameworks</h3>
         <p>
-          JavaScript, TypeScript, Python, Java, C++, HTML, CSS,
-          React, Next.js, NestJS, Node.js, Express
+          JavaScript, TypeScript, Python, Java, C++, Rust • React, Next.js, NestJS, Node.js, Express, FastAPI
         </p>
       </div>
 
       <div>
-        <h3>Databases</h3>
-        <p>PostgreSQL, MongoDB, Redis</p>
+        <h3>Databases & Data</h3>
+        <p>
+          PostgreSQL, MongoDB, Redis, DynamoDB • GraphQL, REST APIs, Elasticsearch
+        </p>
       </div>
 
       <div>
-        <h3>DevOps &amp; Cloud</h3>
+        <h3>DevOps & Cloud Infrastructure</h3>
         <p>
-          AWS (EC2,S3,Lambda), Docker, GitHub Actions, Terraform,
-          CI/CD, REST APIs, JWT Authentication
+          AWS (EC2, S3, Lambda, ECS), Docker, Kubernetes, GitHub Actions, Terraform, CI/CD Pipelines, Nginx, Linux
+        </p>
+      </div>
+
+      <div>
+        <h3>AI & Machine Learning</h3>
+        <p>
+          TensorFlow, PyTorch, OpenCV, Scikit-learn, LLMs, Multimodal AI, Computer Vision, NLP
+        </p>
+      </div>
+
+      <div>
+        <h3>Developer Tools & Practices</h3>
+        <p>
+          Git, GitHub, VS Code, Vim, testing (Jest, Pytest), documentation, system design, microservices architecture
         </p>
       </div>
     </div>
 
     <div class="certifications">
-      <h3>Certifications</h3>
+      <h3>Professional Certifications</h3>
       <ul class="tags">
-        <li>Machine Learning Specialization – Stanford</li>
-        <li>Analyzing Big Data with SQL</li>
+        <li>🏆 Machine Learning Specialization – Stanford (Andrew Ng)</li>
+        <li>📊 Analyzing Big Data with SQL</li>
       </ul>
     </div>
   </section>
@@ -269,8 +292,7 @@
 
     <div class="contact-info">
       <p class="lead" style="margin-bottom: 0;">
-        If you're hiring for software engineering roles or need help shipping a
-        full-stack product, I'd love to chat.
+        I'm actively collaborating on cutting-edge software engineering projects. Whether you're hiring for full-stack, cloud, or AI engineering roles, or looking to ship a production-ready product—let's connect.
       </p>
 
       <div>
@@ -312,6 +334,22 @@
 </footer>
 
 <script>
+  // Navbar background on scroll
+  let lastScrollTop = 0;
+  const navbar = document.getElementById("navbar");
+  
+  window.addEventListener("scroll", function() {
+    let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+    
+    if (currentScroll > 50) {
+      navbar.style.boxShadow = "0 4px 20px rgba(0, 0, 0, 0.3)";
+    } else {
+      navbar.style.boxShadow = "none";
+    }
+    
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+  });
+
   document.getElementById("year").textContent = new Date().getFullYear();
 
   function scrollProjects(direction) {
