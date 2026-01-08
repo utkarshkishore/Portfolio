@@ -17,6 +17,20 @@
 
 <body>
 
+<nav class="navbar">
+  <div class="navbar__container">
+    <div class="navbar__logo">
+      <span class="logo-text">UK</span>
+    </div>
+    <ul class="navbar__menu">
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
 <header class="hero" id="hero">
   <div class="hero__content">
     <p class="eyebrow">Software Engineer</p>
@@ -24,10 +38,6 @@
     <p class="lead">
       I am a Master's student in Software Engineering at Arizona State University, specializing in the intersection of Full-Stack Development and Artificial Intelligence. With a strong foundation in the MERN stack and Deep Learning, I build scalable web platforms integrated with advanced CNN architectures and ML models. I will graduate in Summer 2026 and am open to full-time opportunities.
     </p>
-
-    <div class="hero__actions">
-      <a class="btn ghost" href="#projects">View Projects</a>
-    </div>
 
     <ul class="contact">
       <li><a href="tel:16233995821">623-399-5821</a></li>
@@ -69,7 +79,7 @@
       <article class="timeline__item">
         <header>
           <h3>Arizona State University</h3>
-          <span class="meta">Tempe, AZ · Aug 2024 – Present</span>
+          <span class="meta">Tempe, AZ · Aug 2024 – May 2026</span>
         </header>
         <p class="timeline__role">Master of Science in Software Engineering</p>
         <p class="timeline__body">
@@ -225,7 +235,7 @@
     </div>
 
     <div class="skills">
-      <div>
+      <div class="skill-card">
         <h3>Languages &amp; Frameworks</h3>
         <p>
           JavaScript, TypeScript, Python, Java, C++, HTML, CSS,
@@ -233,12 +243,12 @@
         </p>
       </div>
 
-      <div>
+      <div class="skill-card">
         <h3>Databases</h3>
         <p>PostgreSQL, MongoDB, Redis</p>
       </div>
 
-      <div>
+      <div class="skill-card">
         <h3>DevOps &amp; Cloud</h3>
         <p>
           AWS (EC2,S3,Lambda), Docker, GitHub Actions, Terraform,
@@ -320,6 +330,27 @@
       behavior: "smooth"
     });
   }
+
+  // Intersection Observer for scroll animations
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: "0px 0px -50px 0px"
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.style.animation = "fadeInUp 0.8s ease-out forwards";
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  // Observe all elements that should animate
+  document.querySelectorAll(".section__header, .timeline__item, .card, .skills, .certifications, .contact-container, footer").forEach((el) => {
+    el.style.opacity = "0";
+    observer.observe(el);
+  });
 </script>
 
 </body>
