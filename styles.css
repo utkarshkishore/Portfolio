@@ -32,19 +32,31 @@ body {
   position: relative;
 }
 
-body::before {
+body::after {
   content: '';
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: 
+  background:
     linear-gradient(rgba(75, 242, 196, 0.03) 1px, transparent 1px),
     linear-gradient(90deg, rgba(75, 242, 196, 0.03) 1px, transparent 1px);
   background-size: 40px 40px;
   pointer-events: none;
   z-index: 0;
+}
+
+/* ANIMATED BACKGROUND CANVAS */
+#animated-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 0.5;
+  opacity: 0.8;
 }
 
 body > * {
@@ -250,10 +262,9 @@ footer.animated {
   gap: 2rem;
   padding: 8rem clamp(1.5rem, 5vw, 4rem) 4rem;
   align-items: center;
-  background:
-    radial-gradient(circle at top right, rgba(75, 242, 196, 0.15), transparent 55%),
-    var(--bg);
+  background: transparent;
   animation: fadeInUp 0.8s ease-out;
+  position: relative;
 }
 
 .hero__content h1 {

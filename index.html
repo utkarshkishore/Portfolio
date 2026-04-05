@@ -17,6 +17,9 @@
 
 <body>
 
+<!-- Animated Background Canvas -->
+<canvas id="animated-background"></canvas>
+
 <nav class="navbar" id="navbar">
   <div class="navbar__content">
     <a href="#hero" class="navbar__logo">UK</a>
@@ -361,6 +364,119 @@
 </footer>
 
 <script>
+  // ============ ANIMATED BACKGROUND ============
+  const canvas = document.getElementById("animated-background");
+  const ctx = canvas.getContext("2d");
+
+  // Set canvas to full viewport size
+  function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  }
+  resizeCanvas();
+  window.addEventListener("resize", resizeCanvas);
+
+  // Particle system
+  class Particle {
+    constructor(x, y) {
+      this.x = x;
+      this.y = y;
+      this.vx = (Math.random() - 0.5) * 1.5;
+      this.vy = (Math.random() - 0.5) * 1.5;
+      this.radius = Math.random() * 2.5 + 1;
+      this.baseRadius = this.radius;
+      this.life = 1;
+      this.maxLife = 1;
+    }
+
+    update() {
+      this.x += this.vx;
+      this.y += this.vy;
+
+      // Bounce at edges
+      if (this.x - this.radius < 0 || this.x + this.radius > canvas.width) {
+        this.vx *= -1;
+        this.x = Math.max(this.radius, Math.min(canvas.width - this.radius, this.x));
+      }
+      if (this.y - this.radius < 0 || this.y + this.radius > canvas.height) {
+        this.vy *= -1;
+        this.y = Math.max(this.radius, Math.min(canvas.height - this.radius, this.y));
+      }
+
+      // Slow friction
+      this.vx *= 0.998;
+      this.vy *= 0.998;
+    }
+
+    draw(ctx, baseGlow = 0.3) {
+      ctx.save();
+      
+      // Glow effect
+      const gradient = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.radius * 3);
+      gradient.addColorStop(0, `rgba(75, 242, 196, ${baseGlow * 0.6})`);
+      gradient.addColorStop(1, "rgba(75, 242, 196, 0)");
+      
+      ctx.fillStyle = gradient;
+      ctx.fillRect(this.x - this.radius * 3, this.y - this.radius * 3, this.radius * 6, this.radius * 6);
+
+      // Core particle
+      ctx.fillStyle = "rgba(75, 242, 196, 0.9)";
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+      ctx.fill();
+
+      ctx.restore();
+    }
+  }
+
+  const particles = [];
+  const particleCount = Math.min(60, Math.max(30, window.innerWidth / 30));
+
+  // Initialize particles
+  for (let i = 0; i < particleCount; i++) {
+    particles.push(
+      new Particle(Math.random() * canvas.width, Math.random() * canvas.height)
+    );
+  }
+
+  // Animation loop
+  function animate() {
+    // Clear with semi-transparent background for trailing effect
+    ctx.fillStyle = "rgba(6, 11, 16, 0.15)";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    // Update and draw particles
+    particles.forEach((particle) => {
+      particle.update();
+      particle.draw(ctx);
+    });
+
+    // Draw connections between nearby particles
+    for (let i = 0; i < particles.length; i++) {
+      for (let j = i + 1; j < particles.length; j++) {
+        const dx = particles[i].x - particles[j].x;
+        const dy = particles[i].y - particles[j].y;
+        const distance = Math.sqrt(dx * dx + dy * dy);
+        const maxDistance = 150;
+
+        if (distance < maxDistance) {
+          ctx.strokeStyle = `rgba(75, 242, 196, ${0.3 * (1 - distance / maxDistance)})`;
+          ctx.lineWidth = 1.5 * (1 - distance / maxDistance);
+          ctx.beginPath();
+          ctx.moveTo(particles[i].x, particles[i].y);
+          ctx.lineTo(particles[j].x, particles[j].y);
+          ctx.stroke();
+        }
+      }
+    }
+
+    requestAnimationFrame(animate);
+  }
+
+  // Start animation
+  animate();
+
+  // ============ EXISTING SCRIPTS ============
   // Navbar background on scroll
   let lastScrollTop = 0;
   const navbar = document.getElementById("navbar");
