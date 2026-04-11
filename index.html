@@ -8,8 +8,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap"
-          rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap"
+    rel="stylesheet"
   />
 
   <link rel="stylesheet" href="styles.css" />
@@ -17,75 +17,161 @@
 
 <body>
 
-<!-- Animated Background Canvas -->
+<div class="noise" aria-hidden="true"></div>
 <canvas id="animated-background"></canvas>
 
 <nav class="navbar" id="navbar">
   <div class="navbar__content">
-    <a href="#hero" class="navbar__logo">UK</a>
+    <a href="#hero" class="navbar__brand">
+      <span class="navbar__brand-mark">UK</span>
+      <span class="navbar__brand-text">Portfolio</span>
+    </a>
+    <span class="navbar__status">Open to opportunities</span>
     <ul class="navbar__links">
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#skills">Skills</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#career">Career</a></li>
       <li><a href="#education">Education</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#stack">Stack</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </div>
 </nav>
 
 <header class="hero" id="hero">
-  <div class="hero__content">
-    <p class="eyebrow">Software Engineer & AI Enthusiast</p>
-    <h1>Utkarsh<br><span class="accent-text">Kishore</span></h1>
-    <p class="lead">
-      I engineer scalable, intelligent systems that solve real-world problems. Specializing in full-stack development, cloud architecture, and AI-driven solutions. Currently pursuing M.S. in Software Engineering at Arizona State University (graduating Summer 2026) with expertise in the MERN stack, Deep Learning, and distributed systems.
-    </p>
-
-    <ul class="contact">
-      <li><a href="tel:16233995821">📱 623-399-5821</a></li>
-      <li><a href="mailto:utkarshkishore2001@gmail.com">✉️ Email</a></li>
-      <li><a href="https://www.linkedin.com/in/utkarsh-kishore-104861297" target="_blank">💼 LinkedIn</a></li>
-      <li><a href="https://github.com/utkarshkishore" target="_blank">💻 GitHub</a></li>
-    </ul>
-  </div>
-
-  <div class="hero__card">
-    <div class="stat">
-      <p class="stat__label">Current Program</p>
-      <p class="stat__value">M.S. Software Engineering</p>
-      <p class="stat__sub">Arizona State University</p>
+  <div class="hero__grid">
+    <div class="hero__main">
+      <p class="log-label">SYSTEM.LOG / INTRO</p>
+      <div class="hero__roles" aria-label="Roles">
+        <span>Software Engineer</span>
+        <span class="hero__roles-sep">·</span>
+        <span>Full Stack</span>
+        <span class="hero__roles-sep">·</span>
+        <span>AI / ML</span>
+      </div>
+      <h1 class="hero__title">
+        <span class="hero__title-line">UTKARSH</span>
+        <span class="hero__title-line hero__title-line--accent">KISHORE</span>
+      </h1>
+      <p class="hero__quote">“Ship systems that stay calm when the world gets loud.”</p>
+      <p class="lead hero__lead">
+        I build scalable full-stack products and intelligent features end to end—from APIs and data models to interfaces people actually use. M.S. Software Engineering @ Arizona State University (Summer 2026).
+      </p>
+      <div class="hero__actions">
+        <a class="btn primary" href="assets/UTKARSH_RESUME.pdf" target="_blank" rel="noopener">Download_Resume</a>
+        <a class="btn ghost" href="#contact">Transmit_Message</a>
+      </div>
+      <ul class="hero__channels">
+        <li><a href="tel:16233995821"><span class="channel-key">Phone</span><span class="channel-val">623-399-5821</span></a></li>
+        <li><a href="mailto:utkarshkishore2001@gmail.com"><span class="channel-key">Email</span><span class="channel-val">utkarshkishore2001@gmail.com</span></a></li>
+        <li><a href="https://www.linkedin.com/in/utkarsh-kishore-104861297" target="_blank" rel="noopener"><span class="channel-key">LinkedIn</span><span class="channel-val">/in/utkarsh-kishore</span></a></li>
+        <li><a href="https://github.com/utkarshkishore" target="_blank" rel="noopener"><span class="channel-key">GitHub</span><span class="channel-val">@utkarshkishore</span></a></li>
+      </ul>
     </div>
 
-    <div class="stat">
-      <p class="stat__label">Core Focus</p>
-      <p class="stat__value">AI Engineering · Full Stack</p>
-      <p class="stat__sub">Intelligent & Scalable Systems</p>
-    </div>
-
-    <a class="btn fullwidth" href="assets/UTKARSH_RESUME.pdf" target="_blank">
-      Download Resume
-    </a>
+    <aside class="hero__panel" aria-label="Profile summary">
+      <div class="panel-header">
+        <span class="panel-tag">CREATIVE_NODE</span>
+        <span class="panel-version">#2026.V1</span>
+      </div>
+      <div class="hero__avatar-ring">
+        <div class="hero__avatar-placeholder" aria-hidden="true">UK</div>
+      </div>
+      <p class="panel-name">Utkarsh Kishore</p>
+      <p class="panel-role">Full Stack · AI Engineering</p>
+      <ul class="hero__metrics">
+        <li><span class="metric-val">M.S.</span><span class="metric-label">In progress</span></li>
+        <li><span class="metric-val">5+</span><span class="metric-label">Projects shipped</span></li>
+        <li><span class="metric-val">IEEE</span><span class="metric-label">Research pub</span></li>
+      </ul>
+    </aside>
   </div>
 </header>
 
 <main>
 
-  <section class="section" id="education">
-    <div class="section__header">
-      <p class="eyebrow">Education</p>
-      <h2>Academic Journey</h2>
+  <section class="section section--about" id="about">
+    <div class="section__head">
+      <p class="log-label">SYSTEM.LOG / PROFILE</p>
+      <h2 class="section__title">About <span class="section__title-muted">&amp; focus</span></h2>
+    </div>
+    <div class="about__layout">
+      <p class="about__body">
+        I like turning fuzzy requirements into working software—clean APIs, predictable deployments, and UIs that don’t fight the user. Most of my work sits at the intersection of web platforms, cloud infrastructure, and applied ML.
+      </p>
+      <div class="pillar-grid">
+        <article class="pillar">
+          <h3 class="pillar__key">ARCHITECT</h3>
+          <p class="pillar__val">Distributed systems, APIs, performance</p>
+        </article>
+        <article class="pillar">
+          <h3 class="pillar__key">PRODUCT</h3>
+          <p class="pillar__val">Iteration, UX clarity, measurable impact</p>
+        </article>
+        <article class="pillar">
+          <h3 class="pillar__key">ML_EDGE</h3>
+          <p class="pillar__val">CV, deep learning, LLM integration</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--career" id="career">
+    <div class="section__head section__head--row">
+      <div>
+        <p class="log-label">SYSTEM.LOG / EXPERIENCE</p>
+        <h2 class="section__title">Career <span class="section__title-muted">chronicle</span></h2>
+      </div>
+      <p class="section__kicker">Professional roles &amp; impact</p>
     </div>
 
-    <div class="timeline">
+    <div class="career-layout">
+      <div class="career-rail" aria-hidden="true">
+        <span class="career-rail__pulse"></span>
+      </div>
+      <div class="career-entries">
+        <article class="career-card">
+          <div class="career-card__top">
+            <span class="career-card__ref">ROLE_01</span>
+            <p class="career-card__range">Jan 2026 – Apr 2026</p>
+          </div>
+          <h3 class="career-card__title">Full Stack Developer Intern</h3>
+          <p class="career-card__org">Aligned Rewards</p>
+          <p class="career-card__body">
+            Built features across the stack in an agile team—five sprints delivered on time. Integrated multiple REST APIs and tightened frontend data flow, reducing manual handling steps by roughly 60%.
+          </p>
+          <ul class="tags">
+            <li>REST API Integration</li>
+            <li>Frontend Development</li>
+            <li>Agile / Scrum</li>
+            <li>Full Stack</li>
+            <li>LLM Integration</li>
+            <li>Cross-functional Collaboration</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
 
-      <article class="timeline__item">
-        <header>
+  <section class="section section--education" id="education">
+    <div class="section__head section__head--row">
+      <div>
+        <p class="log-label">SYSTEM.LOG / ACADEMIC_RECORD</p>
+        <h2 class="section__title">Education <span class="section__title-muted">path</span></h2>
+      </div>
+      <p class="section__kicker">Degrees &amp; coursework</p>
+    </div>
+
+    <div class="edu-grid">
+      <article class="edu-card">
+        <div class="edu-card__badge">Graduate</div>
+        <header class="edu-card__head">
           <h3>Arizona State University</h3>
           <span class="meta">Tempe, AZ · Aug 2024 – May 2026</span>
         </header>
-        <p class="timeline__role">Master of Science in Software Engineering</p>
-        <p class="timeline__body">
-          Advanced coursework in scalable distributed systems, cloud-native architectures, AI-driven software development, and formal verification. Building expertise in production-grade engineering practices.
+        <p class="edu-card__degree">Master of Science in Software Engineering</p>
+        <p class="edu-card__body">
+          Advanced coursework in scalable distributed systems, cloud-native architectures, AI-driven software development, and formal verification.
         </p>
         <ul class="tags">
           <li>Advanced DSA</li>
@@ -96,18 +182,17 @@
         </ul>
       </article>
 
-      <article class="timeline__item">
-        <header>
+      <article class="edu-card">
+        <div class="edu-card__badge edu-card__badge--undergrad">Undergraduate</div>
+        <header class="edu-card__head">
           <h3>SRM Institute of Science and Technology</h3>
           <span class="meta">Chennai, India · Sep 2020 – Jun 2024</span>
         </header>
-        <p class="timeline__role">
-          Bachelor of Technology in Computer Science and Engineering
+        <p class="edu-card__degree">Bachelor of Technology in Computer Science and Engineering</p>
+        <p class="edu-card__body">
+          Foundation in computer science, algorithms, machine learning systems, and full-stack development; multiple industry-scale projects with a performance focus.
         </p>
-        <p class="timeline__body">
-          Rigorous foundation in computer science fundamentals, algorithms, machine learning systems, and full-stack development. Completed multiple industry-scale projects with focus on performance and scalability.
-        </p>
-        <ul class="tags">
+        <ul class="tags tags--edu">
           <li>Data Structures</li>
           <li>Algorithms</li>
           <li>OOP</li>
@@ -116,259 +201,250 @@
           <li>Machine Learning</li>
         </ul>
       </article>
-
     </div>
   </section>
 
-  <section class="section" id="experience">
-    <div class="section__header">
-      <p class="eyebrow">Work Experience</p>
-      <h2>Professional Journey</h2>
-    </div>
-
-    <div class="timeline">
-
-      <article class="timeline__item">
-        <header>
-          <h3>Full Stack Developer Intern</h3>
-          <span class="meta">Aligned Rewards · Jan 2026 – Apr 2026</span>
-        </header>
-        <p class="timeline__role">Agile Full Stack Development</p>
-        <p class="timeline__body">
-          Contributed to the development of a full stack web application in an agile team environment, delivering features across 5 sprints with consistent on-time completion. Improved frontend responsiveness and data flow by integrating multiple REST API endpoints, reducing manual data handling steps by ~60%.
-        </p>
-        <ul class="tags">
-          <li>REST API Integration</li>
-          <li>Frontend Development</li>
-          <li>Agile/Scrum</li>
-          <li>Full Stack</li>
-          <li>LLM Integration</li>
-          <li>Cross-functional Collaboration</li>
-        </ul>
-      </article>
-
-    </div>
-  </section>
-
-  <section class="section" id="projects">
-    <div class="section__header projects-header">
+  <section class="section section--projects" id="projects">
+    <div class="section__head projects-header">
       <div>
-        <p class="eyebrow">Projects</p>
-        <h2>Selected Work</h2>
+        <p class="log-label">SYSTEM.LOG / PROJECTS</p>
+        <h2 class="section__title">Selected <span class="section__title-muted">work</span></h2>
       </div>
-
       <div class="project-controls">
-        <button class="arrow" onclick="scrollProjects(-1)">←</button>
-        <button class="arrow" onclick="scrollProjects(1)">→</button>
+        <button type="button" class="arrow" onclick="scrollProjects(-1)" aria-label="Previous projects">←</button>
+        <button type="button" class="arrow" onclick="scrollProjects(1)" aria-label="Next projects">→</button>
       </div>
     </div>
 
     <div class="projects-scroll" id="projectsScroll">
 
       <article class="card">
-        <p class="eyebrow">🔬 Research · IEEE</p>
+        <div class="card__meta">
+          <span class="card__ref">PROJECT_INFO_01</span>
+          <span class="card__close" aria-hidden="true">_</span>
+        </div>
+        <p class="eyebrow">Research · IEEE</p>
         <h3>Plant Disease Detection</h3>
-        <p>
-          Deep learning system leveraging CNN architectures for early-stage plant disease identification and classification through advanced image processing.
-        </p>
+        <p>CNN-based identification and classification with advanced image processing.</p>
         <ul>
-          <li><strong>Dataset:</strong> 3,000+ augmented agricultural images</li>
-          <li><strong>Accuracy:</strong> 98% precision on test set</li>
-          <li><strong>Model:</strong> VGG16 fine-tuned with ReLU/BatchNorm</li>
-          <li><strong>Published:</strong> IEEE Conference, April 2024</li>
+          <li><strong>Dataset:</strong> 3,000+ augmented images</li>
+          <li><strong>Accuracy:</strong> 98% on test set</li>
+          <li><strong>Model:</strong> VGG16 + ReLU / BatchNorm</li>
+          <li><strong>Published:</strong> IEEE, Apr 2024</li>
         </ul>
-        <a href="https://github.com/utkarshkishore/Plant-Disease-identification-and-Classification" target="_blank" class="project-link">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.419-1.305.763-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-          View Repository
+        <a href="https://github.com/utkarshkishore/Plant-Disease-identification-and-Classification" target="_blank" rel="noopener" class="project-link">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.419-1.305.763-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+          [ OPEN_REPO ]
         </a>
       </article>
 
       <article class="card">
-        <p class="eyebrow">☁️ Cloud · DevOps · Full Stack</p>
-        <h3>Feature Flag Management Platform</h3>
-        <p>
-          Enterprise-grade feature flag service enabling safe canary deployments, real-time environment-based releases, and A/B testing infrastructure.
-        </p>
+        <div class="card__meta">
+          <span class="card__ref">PROJECT_INFO_02</span>
+          <span class="card__close" aria-hidden="true">_</span>
+        </div>
+        <p class="eyebrow">Cloud · DevOps</p>
+        <h3>Feature Flag Platform</h3>
+        <p>Enterprise feature flags, canary releases, and environment-based rollouts.</p>
         <ul>
           <li><strong>Stack:</strong> Next.js, NestJS, PostgreSQL, Redis</li>
-          <li><strong>APIs:</strong> 15+ RESTful endpoints with JWT auth & rate limiting</li>
-          <li><strong>Infrastructure:</strong> AWS ECS Fargate, GitHub Actions, Terraform IaC</li>
-          <li><strong>Performance:</strong> Sub-50ms evaluation latency</li>
+          <li><strong>APIs:</strong> 15+ endpoints, JWT, rate limits</li>
+          <li><strong>Infra:</strong> AWS ECS Fargate, Terraform, GHA</li>
+          <li><strong>Latency:</strong> Sub-50ms evaluation</li>
         </ul>
-        <a href="https://github.com/utkarshkishore/Feature-Flag-Platform" target="_blank" class="project-link">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.419-1.305.763-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-          View Repository
+        <a href="https://github.com/utkarshkishore/Feature-Flag-Platform" target="_blank" rel="noopener" class="project-link">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.419-1.305.763-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+          [ OPEN_REPO ]
         </a>
       </article>
 
       <article class="card">
-        <p class="eyebrow">🤖 Deep Learning · OpenCV</p>
+        <div class="card__meta">
+          <span class="card__ref">PROJECT_INFO_03</span>
+          <span class="card__close" aria-hidden="true">_</span>
+        </div>
+        <p class="eyebrow">Deep Learning · OpenCV</p>
         <h3>Hand Gesture Communication</h3>
-        <p>
-          Real-time gesture recognition system translating American Sign Language into text and speech output using advanced computer vision techniques.
-        </p>
+        <p>Real-time ASL-oriented gesture recognition to text and speech.</p>
         <ul>
-          <li><strong>Model:</strong> TensorFlow CNN with 97% accuracy</li>
-          <li><strong>Processing:</strong> OpenCV real-time video inference</li>
-          <li><strong>Features:</strong> Multi-gesture support, accessibility-first design</li>
-          <li><strong>Latency:</strong> &lt;100ms per frame</li>
+          <li><strong>Model:</strong> TensorFlow CNN ~97%</li>
+          <li><strong>Video:</strong> OpenCV inference</li>
+          <li><strong>Latency:</strong> &lt;100ms / frame</li>
         </ul>
-        <a href="https://github.com/utkarshkishore/Gesture-Communication-System" target="_blank" class="project-link">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.419-1.305.763-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-          View Repository
+        <a href="https://github.com/utkarshkishore/Gesture-Communication-System" target="_blank" rel="noopener" class="project-link">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.419-1.305.763-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+          [ OPEN_REPO ]
         </a>
       </article>
 
       <article class="card">
-        <p class="eyebrow">🌐 Full Stack · MERN Stack</p>
+        <div class="card__meta">
+          <span class="card__ref">PROJECT_INFO_04</span>
+          <span class="card__close" aria-hidden="true">_</span>
+        </div>
+        <p class="eyebrow">MERN</p>
         <h3>BlogDaily</h3>
-        <p>
-          High-performance blogging platform with optimized SEO, advanced content discovery, and responsive design delivering exceptional user experience.
-        </p>
+        <p>Performance-focused blogging platform with SEO and discovery.</p>
         <ul>
-          <li><strong>Frontend:</strong> React + Tailwind CSS (40% performance gain)</li>
-          <li><strong>Backend:</strong> Node.js + Express (30% latency reduction)</li>
-          <li><strong>Database:</strong> MongoDB with tagging & full-text search</li>
-          <li><strong>Features:</strong> Categories, sorting, recommendations</li>
+          <li><strong>Frontend:</strong> React + Tailwind</li>
+          <li><strong>Backend:</strong> Node + Express</li>
+          <li><strong>DB:</strong> MongoDB, search &amp; tags</li>
         </ul>
-        <a href="https://github.com/utkarshkishore/BlogDaily" target="_blank" class="project-link">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.419-1.305.763-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-          View Repository
+        <a href="https://github.com/utkarshkishore/BlogDaily" target="_blank" rel="noopener" class="project-link">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.419-1.305.763-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+          [ OPEN_REPO ]
         </a>
       </article>
 
       <article class="card">
-        <p class="eyebrow">🚀 AI · Next.js · FastAPI</p>
+        <div class="card__meta">
+          <span class="card__ref">PROJECT_INFO_05</span>
+          <span class="card__close" aria-hidden="true">_</span>
+        </div>
+        <p class="eyebrow">AI · Next.js · FastAPI</p>
         <h3>ResQChain</h3>
-        <p>
-          Intelligent food waste management system utilizing multimodal AI and computer vision to analyze food freshness and optimize surplus food distribution.
-        </p>
+        <p>Multimodal food freshness analysis and surplus routing.</p>
         <ul>
-          <li><strong>Tech Stack:</strong> Next.js, FastAPI, MongoDB, Google Gemini 1.5</li>
-          <li><strong>ML Model:</strong> 96% accuracy multimodal freshness scoring</li>
-          <li><strong>Performance:</strong> Sub-2s inference with Base64 streaming</li>
-          <li><strong>Impact:</strong> Real-time driver dispatch optimization</li>
+          <li><strong>Stack:</strong> Next.js, FastAPI, MongoDB, Gemini 1.5</li>
+          <li><strong>Accuracy:</strong> 96% freshness scoring</li>
+          <li><strong>Inference:</strong> Sub-2s with Base64 streaming</li>
         </ul>
-        <a href="https://github.com/utkarshkishore/ResQChain--Food-waste-management-system-" target="_blank" class="project-link">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.419-1.305.763-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-          View Repository
+        <a href="https://github.com/utkarshkishore/ResQChain--Food-waste-management-system-" target="_blank" rel="noopener" class="project-link">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.419-1.305.763-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+          [ OPEN_REPO ]
         </a>
       </article>
 
     </div>
   </section>
 
-  <section class="section" id="skills">
-    <div class="section__header">
-      <p class="eyebrow">Skills</p>
-      <h2>Technologies &amp; Tools</h2>
+  <section class="section section--stack" id="stack">
+    <div class="section__head">
+      <p class="log-label">TECHNICAL_ARCHIVE / 2026</p>
+      <h2 class="section__title">Tech <span class="section__title-muted">stack</span></h2>
+    </div>
+    <div class="tech-archive" aria-label="Technologies">
+      <span>TS</span><span>JS</span><span>PY</span><span>JAVA</span><span>RUST</span>
+      <span>REACT</span><span>NEXT</span><span>NODE</span><span>NEST</span><span>EXPRESS</span>
+      <span>POSTGRES</span><span>MONGO</span><span>REDIS</span><span>GRAPHQL</span>
+      <span>AWS</span><span>DOCKER</span><span>K8S</span><span>TERRAFORM</span><span>GHA</span>
+      <span>TF</span><span>PYTORCH</span><span>CV</span><span>LLM</span><span>REST</span>
     </div>
 
+    <div class="section__head section__head--sub">
+      <p class="log-label">SYSTEM.LOG / DOMAINS</p>
+      <h2 class="section__title section__title--sm">Depth <span class="section__title-muted">by area</span></h2>
+    </div>
     <div class="skills">
       <div class="skill-card">
-        <h3>Languages &amp; Frameworks</h3>
+        <h3>Languages &amp; frameworks</h3>
         <p>
-          JavaScript, TypeScript, Python, Java, C++, Rust • React, Next.js, NestJS, Node.js, Express, FastAPI
+          JavaScript, TypeScript, Python, Java, C++, Rust · React, Next.js, NestJS, Node.js, Express, FastAPI
         </p>
       </div>
-
       <div class="skill-card">
-        <h3>Databases &amp; Data</h3>
+        <h3>Databases &amp; data</h3>
         <p>
-          PostgreSQL, MongoDB, Redis, DynamoDB • GraphQL, REST APIs, Elasticsearch
+          PostgreSQL, MongoDB, Redis, DynamoDB · GraphQL, REST, Elasticsearch
         </p>
       </div>
-
       <div class="skill-card">
-        <h3>DevOps &amp; Cloud Infrastructure</h3>
+        <h3>DevOps &amp; cloud</h3>
         <p>
-          AWS (EC2, S3, Lambda, ECS), Docker, Kubernetes, GitHub Actions, Terraform, CI/CD Pipelines, Nginx, Linux
+          AWS (EC2, S3, Lambda, ECS), Docker, Kubernetes, GitHub Actions, Terraform, CI/CD, Nginx, Linux
         </p>
       </div>
-
       <div class="skill-card">
-        <h3>AI &amp; Machine Learning</h3>
+        <h3>AI &amp; ML</h3>
         <p>
-          TensorFlow, PyTorch, OpenCV, Scikit-learn, LLMs, Multimodal AI, Computer Vision, NLP
+          TensorFlow, PyTorch, OpenCV, scikit-learn, LLMs, multimodal AI, computer vision, NLP
         </p>
       </div>
-
       <div class="skill-card">
-        <h3>Developer Tools &amp; Practices</h3>
+        <h3>Tools &amp; practice</h3>
         <p>
-          Git, GitHub, VS Code, Vim, testing (Jest, Pytest), documentation, system design, microservices architecture
+          Git, GitHub, VS Code, Vim, Jest, Pytest, documentation, system design, microservices
         </p>
       </div>
     </div>
 
     <div class="certifications">
-      <h3>Professional Certifications</h3>
+      <h3>Certifications</h3>
       <ul class="tags">
-        <li>🏆 Machine Learning Specialization – Stanford (Andrew Ng)</li>
-        <li>📊 Analyzing Big Data with SQL</li>
+        <li>Machine Learning Specialization – Stanford (Andrew Ng)</li>
+        <li>Analyzing Big Data with SQL</li>
       </ul>
     </div>
   </section>
 
 </main>
 
-<footer class="section" id="contact">
-  <div class="section__header">
-    <p class="eyebrow">Contact</p>
-    <h2>Get in Touch</h2>
+<footer class="section footer" id="contact">
+  <div class="section__head">
+    <p class="log-label">SYSTEM.LOG / CONTACT</p>
+    <h2 class="section__title">Get in <span class="section__title-muted">touch</span></h2>
   </div>
 
   <div class="contact-container">
-
     <div class="contact-info">
-      <p class="lead" style="margin-bottom: 0;">
-        I'm actively collaborating on cutting-edge software engineering projects. Whether you're hiring for full-stack, cloud, or AI engineering roles, or looking to ship a production-ready product—let's connect.
+      <p class="lead contact-lead">
+        Hiring for full-stack, cloud, or AI roles—or need a builder who owns the stack end to end? Let’s talk.
       </p>
-
-      <div>
-        <a class="btn primary" href="https://www.linkedin.com/in/utkarsh-kishore-104861297" target="_blank">
-          Connect on LinkedIn
-        </a>
-      </div>
+      <dl class="contact-channels">
+        <div>
+          <dt>Email_Channel</dt>
+          <dd><a href="mailto:utkarshkishore2001@gmail.com">utkarshkishore2001@gmail.com</a></dd>
+        </div>
+        <div>
+          <dt>Phone_Channel</dt>
+          <dd><a href="tel:16233995821">623-399-5821</a></dd>
+        </div>
+        <div>
+          <dt>Geo_Location</dt>
+          <dd>Tempe, AZ · USA</dd>
+        </div>
+      </dl>
+      <a class="btn primary" href="https://www.linkedin.com/in/utkarsh-kishore-104861297" target="_blank" rel="noopener">Connect_on_LinkedIn</a>
     </div>
 
     <form action="https://formsubmit.co/utkarshkishore2001@gmail.com" method="POST" class="form-box">
-      <input type="text" name="_honey" style="display:none">
+      <input type="text" name="_honey" class="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_next" value="https://utkarshkishore.github.io/">
 
+      <label class="field-label" for="f-name">_First_Name</label>
       <div class="input-group">
-        <input type="text" name="name" class="form-input" placeholder="Your Name" required>
+        <input id="f-name" type="text" name="name" class="form-input" placeholder=" " required>
       </div>
 
+      <label class="field-label" for="f-email">_Email_Addr</label>
       <div class="input-group">
-        <input type="email" name="email" class="form-input" placeholder="Your Email" required>
+        <input id="f-email" type="email" name="email" class="form-input" placeholder=" " required>
       </div>
 
+      <label class="field-label" for="f-subject">_Subject_Line</label>
       <div class="input-group">
-        <input type="text" name="subject" class="form-input" placeholder="Subject" required>
+        <input id="f-subject" type="text" name="subject" class="form-input" placeholder=" " required>
       </div>
 
+      <label class="field-label" for="f-msg">_Message_Prompt</label>
       <div class="input-group">
-        <textarea name="message" class="form-textarea" placeholder="Write your message here..." required></textarea>
+        <textarea id="f-msg" name="message" class="form-textarea" placeholder=" " required></textarea>
       </div>
 
-      <button type="submit" class="btn primary fullwidth">Send Message</button>
+      <button type="submit" class="btn primary fullwidth">Transmit_Message</button>
     </form>
-
   </div>
 
   <p class="footer__note">
-    © <span id="year"></span> Utkarsh Kishore. Crafted with care.
+    © <span id="year"></span> UTKARSH_KISHORE // SYSTEM_LOG
   </p>
 </footer>
 
 <script>
-  // ============ ANIMATED BACKGROUND ============
   const canvas = document.getElementById("animated-background");
   const ctx = canvas.getContext("2d");
 
-  // Set canvas to full viewport size
   function resizeCanvas() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
@@ -376,7 +452,9 @@
   resizeCanvas();
   window.addEventListener("resize", resizeCanvas);
 
-  // Particle system
+  const ACCENT = "75, 245, 200";
+  const ACCENT2 = "196, 181, 253";
+
   class Particle {
     constructor(x, y) {
       this.x = x;
@@ -384,16 +462,12 @@
       this.vx = (Math.random() - 0.5) * 1.5;
       this.vy = (Math.random() - 0.5) * 1.5;
       this.radius = Math.random() * 2.5 + 1;
-      this.baseRadius = this.radius;
-      this.life = 1;
-      this.maxLife = 1;
+      this.hue = Math.random() > 0.65 ? ACCENT2 : ACCENT;
     }
 
     update() {
       this.x += this.vx;
       this.y += this.vy;
-
-      // Bounce at edges
       if (this.x - this.radius < 0 || this.x + this.radius > canvas.width) {
         this.vx *= -1;
         this.x = Math.max(this.radius, Math.min(canvas.width - this.radius, this.x));
@@ -402,66 +476,48 @@
         this.vy *= -1;
         this.y = Math.max(this.radius, Math.min(canvas.height - this.radius, this.y));
       }
-
-      // Slow friction
       this.vx *= 0.998;
       this.vy *= 0.998;
     }
 
-    draw(ctx, baseGlow = 0.3) {
+    draw(ctx, baseGlow = 0.28) {
       ctx.save();
-      
-      // Glow effect
       const gradient = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.radius * 3);
-      gradient.addColorStop(0, `rgba(75, 242, 196, ${baseGlow * 0.6})`);
-      gradient.addColorStop(1, "rgba(75, 242, 196, 0)");
-      
+      gradient.addColorStop(0, `rgba(${this.hue}, ${baseGlow * 0.55})`);
+      gradient.addColorStop(1, "rgba(0,0,0,0)");
       ctx.fillStyle = gradient;
       ctx.fillRect(this.x - this.radius * 3, this.y - this.radius * 3, this.radius * 6, this.radius * 6);
-
-      // Core particle
-      ctx.fillStyle = "rgba(75, 242, 196, 0.9)";
+      ctx.fillStyle = `rgba(${this.hue}, 0.88)`;
       ctx.beginPath();
       ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
       ctx.fill();
-
       ctx.restore();
     }
   }
 
   const particles = [];
-  const particleCount = Math.min(60, Math.max(30, window.innerWidth / 30));
-
-  // Initialize particles
+  const particleCount = Math.min(56, Math.max(28, Math.floor(window.innerWidth / 28)));
   for (let i = 0; i < particleCount; i++) {
-    particles.push(
-      new Particle(Math.random() * canvas.width, Math.random() * canvas.height)
-    );
+    particles.push(new Particle(Math.random() * canvas.width, Math.random() * canvas.height));
   }
 
-  // Animation loop
   function animate() {
-    // Clear with semi-transparent background for trailing effect
-    ctx.fillStyle = "rgba(6, 11, 16, 0.15)";
+    ctx.fillStyle = "rgba(5, 5, 8, 0.14)";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-    // Update and draw particles
-    particles.forEach((particle) => {
-      particle.update();
-      particle.draw(ctx);
+    particles.forEach((p) => {
+      p.update();
+      p.draw(ctx);
     });
-
-    // Draw connections between nearby particles
+    const maxDistance = 140;
     for (let i = 0; i < particles.length; i++) {
       for (let j = i + 1; j < particles.length; j++) {
         const dx = particles[i].x - particles[j].x;
         const dy = particles[i].y - particles[j].y;
         const distance = Math.sqrt(dx * dx + dy * dy);
-        const maxDistance = 150;
-
         if (distance < maxDistance) {
-          ctx.strokeStyle = `rgba(75, 242, 196, ${0.3 * (1 - distance / maxDistance)})`;
-          ctx.lineWidth = 1.5 * (1 - distance / maxDistance);
+          const a = 0.22 * (1 - distance / maxDistance);
+          ctx.strokeStyle = `rgba(${particles[i].hue}, ${a})`;
+          ctx.lineWidth = 1.2 * (1 - distance / maxDistance);
           ctx.beginPath();
           ctx.moveTo(particles[i].x, particles[i].y);
           ctx.lineTo(particles[j].x, particles[j].y);
@@ -469,46 +525,26 @@
         }
       }
     }
-
     requestAnimationFrame(animate);
   }
-
-  // Start animation
   animate();
 
-  // ============ EXISTING SCRIPTS ============
-  // Navbar background on scroll
-  let lastScrollTop = 0;
   const navbar = document.getElementById("navbar");
-  
-  window.addEventListener("scroll", function() {
-    let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-    
-    if (currentScroll > 50) {
-      navbar.style.boxShadow = "0 4px 20px rgba(0, 0, 0, 0.3)";
-    } else {
-      navbar.style.boxShadow = "none";
-    }
-    
-    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+  window.addEventListener("scroll", function () {
+    const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+    navbar.classList.toggle("navbar--scrolled", currentScroll > 40);
   });
 
   document.getElementById("year").textContent = new Date().getFullYear();
 
   function scrollProjects(direction) {
-    const container = document.getElementById("projectsScroll");
-    container.scrollBy({
-      left: direction * 350,
+    document.getElementById("projectsScroll").scrollBy({
+      left: direction * 360,
       behavior: "smooth"
     });
   }
 
-  // Intersection Observer for scroll animations
-  const observerOptions = {
-    threshold: 0.1,
-    rootMargin: "0px 0px -50px 0px"
-  };
-
+  const observerOptions = { threshold: 0.08, rootMargin: "0px 0px -40px 0px" };
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
@@ -518,10 +554,11 @@
     });
   }, observerOptions);
 
-  // Observe all elements that should animate
-  document.querySelectorAll(".section__header, .timeline__item, .card, .skill-card, .certifications, .contact-container, footer").forEach((el) => {
-    observer.observe(el);
-  });
+  document
+    .querySelectorAll(
+      ".section__head, .about__layout, .career-layout, .edu-grid .edu-card, .card, .skill-card, .certifications, .tech-archive, .contact-container, .footer__note"
+    )
+    .forEach((el) => observer.observe(el));
 </script>
 
 </body>
