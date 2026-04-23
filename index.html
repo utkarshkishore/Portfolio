@@ -17,8 +17,15 @@
 
 <body>
 
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+<div class="aurora" aria-hidden="true">
+  <div class="aurora__blob aurora__blob--a"></div>
+  <div class="aurora__blob aurora__blob--b"></div>
+  <div class="aurora__blob aurora__blob--c"></div>
+</div>
 <div class="noise" aria-hidden="true"></div>
 <canvas id="animated-background"></canvas>
+<div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
 
 <nav class="navbar" id="navbar">
   <div class="navbar__content">
@@ -99,6 +106,7 @@
 
   <section class="section section--about" id="about">
     <div class="section__head">
+      <span class="section__num" aria-hidden="true">01</span>
       <p class="log-label">SYSTEM.LOG / PROFILE</p>
       <h2 class="section__title">About <span class="section__title-muted">&amp; focus</span></h2>
     </div>
@@ -126,6 +134,7 @@
   <section class="section section--career" id="career">
     <div class="section__head section__head--row">
       <div>
+        <span class="section__num" aria-hidden="true">02</span>
         <p class="log-label">SYSTEM.LOG / EXPERIENCE</p>
         <h2 class="section__title">Career <span class="section__title-muted">chronicle</span></h2>
       </div>
@@ -163,6 +172,7 @@
   <section class="section section--education" id="education">
     <div class="section__head section__head--row">
       <div>
+        <span class="section__num" aria-hidden="true">03</span>
         <p class="log-label">SYSTEM.LOG / ACADEMIC_RECORD</p>
         <h2 class="section__title">Education <span class="section__title-muted">path</span></h2>
       </div>
@@ -214,6 +224,7 @@
   <section class="section section--projects" id="projects">
     <div class="section__head projects-header">
       <div>
+        <span class="section__num" aria-hidden="true">04</span>
         <p class="log-label">SYSTEM.LOG / PROJECTS</p>
         <h2 class="section__title">Selected <span class="section__title-muted">work</span></h2>
       </div>
@@ -226,6 +237,8 @@
     <div class="projects-scroll" id="projectsScroll">
 
       <article class="card">
+        <span class="card__corner card__corner--tl" aria-hidden="true"></span>
+        <span class="card__corner card__corner--br" aria-hidden="true"></span>
         <div class="card__meta">
           <span class="card__ref">PROJECT_INFO_01</span>
           <span class="card__close" aria-hidden="true">_</span>
@@ -246,6 +259,8 @@
       </article>
 
       <article class="card">
+        <span class="card__corner card__corner--tl" aria-hidden="true"></span>
+        <span class="card__corner card__corner--br" aria-hidden="true"></span>
         <div class="card__meta">
           <span class="card__ref">PROJECT_INFO_02</span>
           <span class="card__close" aria-hidden="true">_</span>
@@ -266,6 +281,8 @@
       </article>
 
       <article class="card">
+        <span class="card__corner card__corner--tl" aria-hidden="true"></span>
+        <span class="card__corner card__corner--br" aria-hidden="true"></span>
         <div class="card__meta">
           <span class="card__ref">PROJECT_INFO_03</span>
           <span class="card__close" aria-hidden="true">_</span>
@@ -285,6 +302,8 @@
       </article>
 
       <article class="card">
+        <span class="card__corner card__corner--tl" aria-hidden="true"></span>
+        <span class="card__corner card__corner--br" aria-hidden="true"></span>
         <div class="card__meta">
           <span class="card__ref">PROJECT_INFO_04</span>
           <span class="card__close" aria-hidden="true">_</span>
@@ -304,6 +323,8 @@
       </article>
 
       <article class="card">
+        <span class="card__corner card__corner--tl" aria-hidden="true"></span>
+        <span class="card__corner card__corner--br" aria-hidden="true"></span>
         <div class="card__meta">
           <span class="card__ref">PROJECT_INFO_05</span>
           <span class="card__close" aria-hidden="true">_</span>
@@ -327,15 +348,23 @@
 
   <section class="section section--stack" id="stack">
     <div class="section__head">
+      <span class="section__num" aria-hidden="true">05</span>
       <p class="log-label">TECHNICAL_ARCHIVE / 2026</p>
       <h2 class="section__title">Tech <span class="section__title-muted">stack</span></h2>
     </div>
-    <div class="tech-archive" aria-label="Technologies">
-      <span>TS</span><span>JS</span><span>PY</span><span>JAVA</span><span>RUST</span>
-      <span>REACT</span><span>NEXT</span><span>NODE</span><span>NEST</span><span>EXPRESS</span>
-      <span>POSTGRES</span><span>MONGO</span><span>REDIS</span><span>GRAPHQL</span>
-      <span>AWS</span><span>DOCKER</span><span>K8S</span><span>TERRAFORM</span><span>GHA</span>
-      <span>TF</span><span>PYTORCH</span><span>CV</span><span>LLM</span><span>REST</span>
+    <div class="tech-archive-wrap">
+      <div class="tech-archive" aria-label="Technologies">
+        <span>TS</span><span>JS</span><span>PY</span><span>JAVA</span><span>RUST</span>
+        <span>REACT</span><span>NEXT</span><span>NODE</span><span>NEST</span><span>EXPRESS</span>
+        <span>POSTGRES</span><span>MONGO</span><span>REDIS</span><span>GRAPHQL</span>
+        <span>AWS</span><span>DOCKER</span><span>K8S</span><span>TERRAFORM</span><span>GHA</span>
+        <span>TF</span><span>PYTORCH</span><span>CV</span><span>LLM</span><span>REST</span>
+        <span aria-hidden="true">TS</span><span aria-hidden="true">JS</span><span aria-hidden="true">PY</span><span aria-hidden="true">JAVA</span><span aria-hidden="true">RUST</span>
+        <span aria-hidden="true">REACT</span><span aria-hidden="true">NEXT</span><span aria-hidden="true">NODE</span><span aria-hidden="true">NEST</span><span aria-hidden="true">EXPRESS</span>
+        <span aria-hidden="true">POSTGRES</span><span aria-hidden="true">MONGO</span><span aria-hidden="true">REDIS</span><span aria-hidden="true">GRAPHQL</span>
+        <span aria-hidden="true">AWS</span><span aria-hidden="true">DOCKER</span><span aria-hidden="true">K8S</span><span aria-hidden="true">TERRAFORM</span><span aria-hidden="true">GHA</span>
+        <span aria-hidden="true">TF</span><span aria-hidden="true">PYTORCH</span><span aria-hidden="true">CV</span><span aria-hidden="true">LLM</span><span aria-hidden="true">REST</span>
+      </div>
     </div>
 
     <div class="section__head section__head--sub">
@@ -388,6 +417,7 @@
 
 <footer class="section footer" id="contact">
   <div class="section__head">
+    <span class="section__num" aria-hidden="true">06</span>
     <p class="log-label">SYSTEM.LOG / CONTACT</p>
     <h2 class="section__title">Get in <span class="section__title-muted">touch</span></h2>
   </div>
@@ -449,82 +479,92 @@
 </footer>
 
 <script>
+  /* ————————— Animated background (particles + constellation) ————————— */
   const canvas = document.getElementById("animated-background");
   const ctx = canvas.getContext("2d");
+  const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+  let dpr = Math.min(window.devicePixelRatio || 1, 2);
   function resizeCanvas() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    canvas.width = window.innerWidth * dpr;
+    canvas.height = window.innerHeight * dpr;
+    canvas.style.width = window.innerWidth + "px";
+    canvas.style.height = window.innerHeight + "px";
+    ctx.setTransform(1, 0, 0, 1, 0, 0);
+    ctx.scale(dpr, dpr);
   }
   resizeCanvas();
   window.addEventListener("resize", resizeCanvas);
 
   const ACCENT = "75, 245, 200";
   const ACCENT2 = "196, 181, 253";
+  const ACCENT3 = "244, 114, 182";
+
+  const mouse = { x: -9999, y: -9999 };
+  window.addEventListener("mousemove", (e) => {
+    mouse.x = e.clientX;
+    mouse.y = e.clientY;
+  });
+  window.addEventListener("mouseleave", () => {
+    mouse.x = -9999; mouse.y = -9999;
+  });
 
   class Particle {
     constructor(x, y) {
       this.x = x;
       this.y = y;
-      this.vx = (Math.random() - 0.5) * 1.5;
-      this.vy = (Math.random() - 0.5) * 1.5;
-      this.radius = Math.random() * 2.5 + 1;
-      this.hue = Math.random() > 0.65 ? ACCENT2 : ACCENT;
+      this.vx = (Math.random() - 0.5) * 0.8;
+      this.vy = (Math.random() - 0.5) * 0.8;
+      this.radius = Math.random() * 1.8 + 0.6;
+      const r = Math.random();
+      this.hue = r > 0.8 ? ACCENT3 : r > 0.5 ? ACCENT2 : ACCENT;
     }
-
-    update() {
+    update(w, h) {
       this.x += this.vx;
       this.y += this.vy;
-      if (this.x - this.radius < 0 || this.x + this.radius > canvas.width) {
-        this.vx *= -1;
-        this.x = Math.max(this.radius, Math.min(canvas.width - this.radius, this.x));
-      }
-      if (this.y - this.radius < 0 || this.y + this.radius > canvas.height) {
-        this.vy *= -1;
-        this.y = Math.max(this.radius, Math.min(canvas.height - this.radius, this.y));
-      }
-      this.vx *= 0.998;
-      this.vy *= 0.998;
-    }
+      if (this.x < 0 || this.x > w) this.vx *= -1;
+      if (this.y < 0 || this.y > h) this.vy *= -1;
 
-    draw(ctx, baseGlow = 0.28) {
-      ctx.save();
-      const gradient = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.radius * 3);
-      gradient.addColorStop(0, `rgba(${this.hue}, ${baseGlow * 0.55})`);
-      gradient.addColorStop(1, "rgba(0,0,0,0)");
-      ctx.fillStyle = gradient;
-      ctx.fillRect(this.x - this.radius * 3, this.y - this.radius * 3, this.radius * 6, this.radius * 6);
-      ctx.fillStyle = `rgba(${this.hue}, 0.88)`;
+      const dx = this.x - mouse.x;
+      const dy = this.y - mouse.y;
+      const dist = Math.sqrt(dx * dx + dy * dy);
+      if (dist < 140) {
+        const force = (140 - dist) / 140;
+        this.x += (dx / dist) * force * 1.2;
+        this.y += (dy / dist) * force * 1.2;
+      }
+    }
+    draw(ctx) {
+      ctx.fillStyle = `rgba(${this.hue}, 0.85)`;
       ctx.beginPath();
       ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
       ctx.fill();
-      ctx.restore();
     }
   }
 
   const particles = [];
-  const particleCount = Math.min(56, Math.max(28, Math.floor(window.innerWidth / 28)));
+  const particleCount = prefersReduced ? 0 : Math.min(70, Math.max(30, Math.floor(window.innerWidth / 24)));
   for (let i = 0; i < particleCount; i++) {
-    particles.push(new Particle(Math.random() * canvas.width, Math.random() * canvas.height));
+    particles.push(new Particle(Math.random() * window.innerWidth, Math.random() * window.innerHeight));
   }
 
   function animate() {
-    ctx.fillStyle = "rgba(5, 5, 8, 0.14)";
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-    particles.forEach((p) => {
-      p.update();
-      p.draw(ctx);
-    });
-    const maxDistance = 140;
+    const w = window.innerWidth;
+    const h = window.innerHeight;
+    ctx.clearRect(0, 0, w, h);
+    particles.forEach((p) => { p.update(w, h); p.draw(ctx); });
+
+    const maxDistance = 130;
     for (let i = 0; i < particles.length; i++) {
       for (let j = i + 1; j < particles.length; j++) {
         const dx = particles[i].x - particles[j].x;
         const dy = particles[i].y - particles[j].y;
-        const distance = Math.sqrt(dx * dx + dy * dy);
-        if (distance < maxDistance) {
-          const a = 0.22 * (1 - distance / maxDistance);
+        const d = Math.sqrt(dx * dx + dy * dy);
+        if (d < maxDistance) {
+          const a = 0.22 * (1 - d / maxDistance);
           ctx.strokeStyle = `rgba(${particles[i].hue}, ${a})`;
-          ctx.lineWidth = 1.2 * (1 - distance / maxDistance);
+          ctx.lineWidth = 0.9 * (1 - d / maxDistance);
           ctx.beginPath();
           ctx.moveTo(particles[i].x, particles[i].y);
           ctx.lineTo(particles[j].x, particles[j].y);
@@ -534,38 +574,166 @@
     }
     requestAnimationFrame(animate);
   }
-  animate();
+  if (!prefersReduced) animate();
 
-  const navbar = document.getElementById("navbar");
-  window.addEventListener("scroll", function () {
-    const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-    navbar.classList.toggle("navbar--scrolled", currentScroll > 40);
+  /* ————————— Cursor glow ————————— */
+  const cursorGlow = document.getElementById("cursorGlow");
+  let cx = window.innerWidth / 2, cy = window.innerHeight / 2;
+  let tx = cx, ty = cy;
+  window.addEventListener("mousemove", (e) => {
+    tx = e.clientX; ty = e.clientY;
+    cursorGlow.style.opacity = "1";
   });
+  function animateCursor() {
+    cx += (tx - cx) * 0.18;
+    cy += (ty - cy) * 0.18;
+    cursorGlow.style.transform = `translate(${cx}px, ${cy}px) translate(-50%, -50%)`;
+    requestAnimationFrame(animateCursor);
+  }
+  if (!prefersReduced) animateCursor();
+
+  /* ————————— Navbar & scroll progress ————————— */
+  const navbar = document.getElementById("navbar");
+  const progress = document.getElementById("scrollProgress");
+  function onScroll() {
+    const y = window.pageYOffset || document.documentElement.scrollTop;
+    navbar.classList.toggle("navbar--scrolled", y > 40);
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const pct = docHeight > 0 ? (y / docHeight) * 100 : 0;
+    progress.style.width = pct + "%";
+    updateSectionParallax();
+  }
+  const sectionEls = document.querySelectorAll(".section");
+  function updateSectionParallax() {
+    if (prefersReduced) return;
+    const vh = window.innerHeight || 1;
+    sectionEls.forEach((section) => {
+      const rect = section.getBoundingClientRect();
+      const progress = (vh - rect.top) / (vh + rect.height);
+      const normalized = Math.max(-1, Math.min(1, (progress - 0.5) * 2));
+      const offset = normalized * 18;
+      const num = section.querySelector(".section__num");
+      if (num) {
+        num.style.setProperty("--num-parallax", `${offset.toFixed(2)}px`);
+      }
+    });
+  }
+  window.addEventListener("scroll", onScroll, { passive: true });
+  window.addEventListener("resize", updateSectionParallax);
+  onScroll();
 
   document.getElementById("year").textContent = new Date().getFullYear();
 
+  /* ————————— Projects horizontal scroll ————————— */
   function scrollProjects(direction) {
     document.getElementById("projectsScroll").scrollBy({
       left: direction * 360,
       behavior: "smooth"
     });
   }
+  window.scrollProjects = scrollProjects;
 
-  const observerOptions = { threshold: 0.08, rootMargin: "0px 0px -40px 0px" };
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("animated");
-        observer.unobserve(entry.target);
-      }
+  /* ————————— Reveal on scroll (staggered) ————————— */
+  const revealGroups = [
+    { selector: ".section__head", variant: "reveal--title" },
+    { selector: ".about__body, .contact-info", variant: "reveal--copy" },
+    { selector: ".pillar, .career-card, .edu-card, .card, .skill-card, .form-box, .certifications", variant: "reveal--card" },
+    { selector: ".tech-archive-wrap, .footer__note", variant: "" },
+  ];
+  const revealEls = [];
+  revealGroups.forEach(({ selector, variant }) => {
+    document.querySelectorAll(selector).forEach((el) => {
+      el.classList.add("reveal");
+      if (variant) el.classList.add(variant);
+      revealEls.push(el);
     });
-  }, observerOptions);
+  });
+  revealEls.forEach((el) => {
+    const parent = el.parentElement;
+    if (!parent) return;
+    const siblings = Array.from(parent.children).filter((child) => child.classList.contains("reveal"));
+    const siblingIndex = siblings.indexOf(el);
+    if (siblingIndex >= 0 && siblingIndex < 8) {
+      el.setAttribute("data-delay", String(siblingIndex));
+    }
+  });
 
-  document
-    .querySelectorAll(
-      ".section__head, .about__layout, .career-layout, .edu-grid .edu-card, .card, .skill-card, .certifications, .tech-archive, .contact-container, .footer__note"
-    )
-    .forEach((el) => observer.observe(el));
+  if (prefersReduced) {
+    revealEls.forEach((el) => el.classList.add("is-visible"));
+  } else {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.18, rootMargin: "0px 0px -14% 0px" });
+
+    revealEls.forEach((el) => io.observe(el));
+  }
+
+  /* ————————— Spotlight (cards + hero panel) ————————— */
+  const spotlightEls = document.querySelectorAll(".card, .hero__panel");
+  spotlightEls.forEach((el) => {
+    el.addEventListener("mousemove", (e) => {
+      const rect = el.getBoundingClientRect();
+      const x = ((e.clientX - rect.left) / rect.width) * 100;
+      const y = ((e.clientY - rect.top) / rect.height) * 100;
+      el.style.setProperty("--mx", x + "%");
+      el.style.setProperty("--my", y + "%");
+    });
+    el.addEventListener("mouseleave", () => {
+      el.style.setProperty("--mx", "50%");
+      el.style.setProperty("--my", "50%");
+    });
+  });
+
+  /* ————————— 3D tilt on cards ————————— */
+  const tiltEls = document.querySelectorAll(".card, .edu-card, .skill-card");
+  tiltEls.forEach((el) => {
+    let rafId = null;
+    el.addEventListener("mousemove", (e) => {
+      const rect = el.getBoundingClientRect();
+      const px = (e.clientX - rect.left) / rect.width - 0.5;
+      const py = (e.clientY - rect.top) / rect.height - 0.5;
+      if (rafId) cancelAnimationFrame(rafId);
+      rafId = requestAnimationFrame(() => {
+        el.style.transform = `perspective(900px) rotateX(${-py * 4}deg) rotateY(${px * 6}deg) translateY(-4px)`;
+      });
+    });
+    el.addEventListener("mouseleave", () => {
+      if (rafId) cancelAnimationFrame(rafId);
+      el.style.transform = "";
+    });
+  });
+
+  /* ————————— Magnetic buttons ————————— */
+  const magnetEls = document.querySelectorAll(".btn, .arrow");
+  magnetEls.forEach((el) => {
+    el.addEventListener("mousemove", (e) => {
+      const rect = el.getBoundingClientRect();
+      const x = e.clientX - rect.left - rect.width / 2;
+      const y = e.clientY - rect.top - rect.height / 2;
+      el.style.transform = `translate(${x * 0.18}px, ${y * 0.22}px)`;
+    });
+    el.addEventListener("mouseleave", () => {
+      el.style.transform = "";
+    });
+  });
+
+  /* ————————— Parallax on aurora blobs ————————— */
+  const blobs = document.querySelectorAll(".aurora__blob");
+  if (!prefersReduced) {
+    window.addEventListener("mousemove", (e) => {
+      const xRatio = (e.clientX / window.innerWidth - 0.5) * 2;
+      const yRatio = (e.clientY / window.innerHeight - 0.5) * 2;
+      blobs.forEach((b, i) => {
+        const depth = (i + 1) * 8;
+        b.style.translate = `${xRatio * depth}px ${yRatio * depth}px`;
+      });
+    });
+  }
 </script>
 
 </body>
